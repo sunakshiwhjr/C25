@@ -9,7 +9,7 @@ const Bodies = Matter.Bodies;
 //create your own engine, world and bodies using the physics engine
 var myEngine, myWorld;
 
-var ground1;
+var ground1, platform;
 var box1, box2, box3, box4, box5;
 var pig1;
 var log1, log2, log3;
@@ -31,6 +31,7 @@ function setup() {
   myWorld = myEngine.world;
   //create new ground object out of the Ground Class 
    ground1 = new Ground(600, height, 1200, 20);
+   platform = new Ground(150, 305, 300, 170);
 
   //create new Box object out of Box Class
     box1 = new Box(700, 320, 70, 70);  
@@ -66,6 +67,7 @@ function draw() {
  //Solution : Add push and pop
  //Solution:  Add ground.display() after the box1.display() and box2.display()
  ground1.display();
+ platform.display();
 
  box1.display();
  box2.display();
